@@ -1,11 +1,11 @@
 # Pet-Feeder
 ESP8266 based Pet Feeder.
 
-[![GitHub version](https://img.shields.io/github/release/ldab/Pet-Feeder.svg)](https://github.com/ldab/Pet-Feeder/releases/latest)
-[![Build Status](https://travis-ci.org/ldab/Pet-Feeder.svg?branch=master)](https://travis-ci.org/ldab/Pet-Feeder)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/ldab/Pet-Feeder/blob/master/LICENSE)
+[![GitHub version](https://img.shields.io/github/release/ldab/Pet-Feeder.svg)](https://github.com/ldab/Pet_Feeder/releases/latest)
+[![Build Status](https://travis-ci.org/ldab/Pet-Feeder.svg?branch=master)](https://travis-ci.org/ldab/Pet_Feeder)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/ldab/Pet_Feeder/blob/master/LICENSE)
 
-[![GitHub last commit](https://img.shields.io/github/last-commit/ldab/Pet-Feeder.svg?style=social)](https://github.com/ldab/Pet-Feeder)
+[![GitHub last commit](https://img.shields.io/github/last-commit/ldab/Pet-Feeder.svg?style=social)](https://github.com/ldab/Pet_Feeder)
 
 [![ESPet](./pics/ESPet.jpg)]()
 
