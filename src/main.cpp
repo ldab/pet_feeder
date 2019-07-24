@@ -34,9 +34,10 @@ Distributed as-is; no warranty is given.
 #endif
 
 //Servo attached to GPIO2 -> D4
-#define SERVO_PIN   2
-#define SERVO_CLOSE 0
-#define SERVO_OPEN  90
+//#define SERVO_PIN   2
+#define SERVO_PIN   5     // D1 -> GPIO5
+#define SERVO_CLOSE 90
+#define SERVO_OPEN  0
 
 // WiFi and Blynk App credentials;
 char ssid[] = "";
@@ -126,7 +127,6 @@ void loop()
     DBG("Feeding, open servo");
 
     // Call timer to close servo after d seconds
-    timer.setTimeout( 5000, feed_now );
+    timer.setTimeout( 500, feed_now );
   }
-
 }   //end loop

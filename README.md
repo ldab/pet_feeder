@@ -2,12 +2,17 @@
 ESP8266 based Pet Feeder.
 
 [![GitHub version](https://img.shields.io/github/release/ldab/Pet_Feeder.svg)](https://github.com/ldab/Pet_Feeder/releases/latest)
+[![CodeFactor](https://www.codefactor.io/repository/github/ldab/pet_feeder/badge/master)](https://www.codefactor.io/repository/github/ldab/pet_feeder/overview/master)
 [![Build Status](https://travis-ci.org/ldab/Pet_Feeder.svg?branch=master)](https://travis-ci.org/ldab/Pet_Feeder)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/ldab/Pet_Feeder/blob/master/LICENSE)
 
 [![GitHub last commit](https://img.shields.io/github/last-commit/ldab/Pet_Feeder.svg?style=social)](https://github.com/ldab/Pet_Feeder)
 
-[![ESPet](./pics/ESPet.jpg)]()
+![ESPet](./pics/espet.gif)
+
+## TODO
+
+* V2 - with a rotary feeder. currently the food get stuck sometimes.
 
 ## Sumary
 
@@ -32,17 +37,17 @@ ESP8266 based Pet Feeder.
 
 ### Board Pinout
 
-
+![](https://www.prometec.net/wp-content/uploads/2016/03/e90c9fb2-9114-3c70-5adf-5697ba268788.jpg)
 
 ## Blynk App
-
-
 
 <img src="./pics/ESPet_blynk.jpg" width="30%"> <img src="./pics/QR.jpg" width="30%"> 
 
 ## 3D Printing
 
-* 
+* You can find the 3D files [here](./3d-files)
+
+![ESPet](./pics/servo.png)
 
 ## Credits
 
