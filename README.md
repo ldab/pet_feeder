@@ -8,11 +8,15 @@ ESP8266 based Pet Feeder.
 
 [![GitHub last commit](https://img.shields.io/github/last-commit/ldab/Pet_Feeder.svg?style=social)](https://github.com/ldab/Pet_Feeder)
 
-![ESPet](./pics/espet.gif)
-
 * This was more than a weekend project, took few designs to get it working, below few examples, being the last one the most successful one:
 
-![](./pics/feed%20screw.gif) ![](./pics/espet.gif) ![](./pics/espet_cut.gif) ![](./pics/moving_gate.gif)
+![](./pics/feed%20screw.gif) 
+
+![](./pics/espet.gif) 
+
+![](./pics/espet_cut.gif) 
+
+![](./pics/moving_gate.gif)
 
 ## Sumary
 
@@ -51,7 +55,7 @@ ESP8266 based Pet Feeder.
 
 ## 3D Printing
 
-* You can find the 3D files [here](./3d%20files) or 
+* You can find the 3D files [here](./3d%20files) or [https://www.thingiverse.com/thing:3776532](https://www.thingiverse.com/thing:3776532)
 
 * Print seetings:
   * Anycubic I3 Mega;
