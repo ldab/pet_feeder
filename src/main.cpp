@@ -37,7 +37,9 @@ Distributed as-is; no warranty is given.
 //#define SERVO_PIN   2
 #define SERVO_PIN   5     // D1 -> GPIO5
 #define SERVO_CLOSE 90
-#define SERVO_OPEN  0
+#define SERVO_OPEN  18
+
+int SERVO_SPEED = 50;
 
 // WiFi and Blynk App credentials;
 char ssid[] = "";
@@ -47,13 +49,21 @@ char auth[] = "";
 time_t  foodtime = -1;
 bool    s_feed   = false;
 
+uint8_t servoTimer;
+uint8_t myPos = SERVO_CLOSE;
+
 WidgetRTC  rtc;
 Servo      myservo;                        // create servo object to control a servo
 BlynkTimer timer;
 
+void openServo();
+void closeServo();
+
+
 void feed_now()
 {
   DBG( "Done feeding, closing" );
+
   myservo.write( SERVO_CLOSE );
 
   Blynk.notify("Done feeding");
@@ -71,7 +81,10 @@ BLYNK_WRITE(V1)
   // Simple time input, returns the time for a day in sec -> max 86400
   foodtime = param[0].asLong();
 
-  s_feed = (foodtime != -1) ? true : false;
+  DBG("time from app:" + String(foodtime));
+
+  // When no input App returns 0, and -1 reset time input;
+  s_feed = (foodtime > 0) ? true : false;
 }
 
 void setup()
@@ -81,7 +94,7 @@ void setup()
   #endif
 
   myservo.attach( SERVO_PIN );
-  myservo.write( SERVO_CLOSE );
+  //myservo.write( SERVO_CLOSE );
 
   Blynk.begin(auth, ssid, pass);
   rtc.begin();
@@ -122,11 +135,34 @@ void loop()
     foodtime = -1;
     s_feed = false;
 
-    // Open the servo for X seconds;
-    myservo.write( SERVO_OPEN );
     DBG("Feeding, open servo");
 
-    // Call timer to close servo after d seconds
-    timer.setTimeout( 500, feed_now );
+    servoTimer = timer.setInterval(SERVO_SPEED, openServo);
   }
 }   //end loop
+
+void openServo()
+{
+  myservo.write( myPos );
+
+  myPos--;
+
+  if( myPos <= SERVO_OPEN )
+  {
+    timer.deleteTimer(servoTimer);
+
+    delay( 500 );
+
+    servoTimer = timer.setInterval(SERVO_SPEED, closeServo);
+  }
+}
+
+void closeServo()
+{
+  myservo.write( myPos );
+
+  myPos++;
+
+  // delete timer when reach position
+  if( myPos >= SERVO_CLOSE )  timer.deleteTimer(servoTimer);
+}

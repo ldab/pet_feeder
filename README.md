@@ -10,9 +10,9 @@ ESP8266 based Pet Feeder.
 
 ![ESPet](./pics/espet.gif)
 
-## TODO
+* This was more than a weekend project, took few designs to get it working, below few examples, being the last one the most successful one:
 
-* V2 - with a rotary feeder. currently the food get stuck sometimes.
+![](./pics/feed%20screw.gif) ![](./pics/espet.gif) ![](./pics/espet_cut.gif) ![](./pics/moving_gate.gif)
 
 ## Sumary
 
@@ -35,6 +35,12 @@ ESP8266 based Pet Feeder.
 
 ## Hardware
 
+### Servo
+
+* Just using the cheap blue [SG90](https://www.google.com/search?client=firefox-b-d&q=sg90+servo):
+
+![SG90](https://opencircuit.nl/resources/content/2ed9317749689/crop/400-320/TowerPro-SG90-9G-micro-servo-motor.jpg)
+
 ### Board Pinout
 
 ![](https://www.prometec.net/wp-content/uploads/2016/03/e90c9fb2-9114-3c70-5adf-5697ba268788.jpg)
@@ -45,10 +51,20 @@ ESP8266 based Pet Feeder.
 
 ## 3D Printing
 
-* You can find the 3D files [here](./3d-files)
+* You can find the 3D files [here](./3d%20files) or 
 
-![ESPet](./pics/servo.png)
+* Print seetings:
+  * Anycubic I3 Mega;
+  * PLA 195degC;
+  * 0.25 resolution;
+  * No support, (only the `gate` requires it);
+  * 3 walls;
+  * 20% Zigzag infill;
+
+![ESPet](./pics/servo.png) ![ESPet](./pics/moving_gate.gif)
 
 ## Credits
+
+*.gif created with [EZGIF.COM](https://ezgif.com/)
 
 GitHub Shields and Badges created with [Shields.io](https://github.com/badges/shields/)
